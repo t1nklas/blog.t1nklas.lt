@@ -51,7 +51,11 @@
         "footnotes",
         "abbr"
     ],
-    "editor": ["nano", "--", "%s"],
+    "editor": [
+        "nano",
+        "--",
+        "%s"
+    ],
     "context-words": [
         "the",
         "a",
@@ -98,7 +102,5 @@
     "read-wpm": 150,
     "top-words": 64,
     "top-tags": 64,
-    "posts": {
-
-    }
-  }
+    "posts": {}
+}

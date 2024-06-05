@@ -495,12 +495,12 @@ def slugify(
 
 
 def rf_format_time(ts: float) -> typing.Tuple[datetime.datetime, str]:
-    d: datetime.datetime = datetime.datetime.utcfromtimestamp(ts)
+    d: datetime.datetime = datetime.datetime.utcfromtimestamp(ts) # type: ignore
     return d, d.strftime("%Y-%m-%d %H:%M:%S")
 
 
 def rformat_time(ts: float) -> str:
-    return datetime.datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d %H:%M:%S")
+    return datetime.datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d %H:%M:%S") # type: ignore
 
 
 def format_time(ts: float) -> str:
@@ -830,7 +830,7 @@ def new(config: dict[str, typing.Any]) -> int:
         "description": description.strip(),
         "content": content,
         "keywords": keywords,
-        "created": datetime.datetime.utcnow().timestamp(),
+        "created": datetime.datetime.utcnow().timestamp(), # type: ignore
     }
 
     return OK
@@ -885,7 +885,7 @@ def ed(config: dict[str, typing.Any], major: bool = True) -> int:
                 return code
 
             if major:
-                post["edited"] = datetime.datetime.utcnow().timestamp()
+                post["edited"] = datetime.datetime.utcnow().timestamp() # type: ignore
 
     return OK
 
@@ -1250,7 +1250,7 @@ def sitemap(config: dict[str, typing.Any]) -> int:
 
     llog("generating a sitemap")
 
-    now: float = datetime.datetime.utcnow().timestamp()
+    now: float = datetime.datetime.utcnow().timestamp() # type: ignore
 
     root: etree.Element = etree.Element("urlset")
     root.set("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9")
@@ -1268,7 +1268,7 @@ def sitemap(config: dict[str, typing.Any]) -> int:
         etree.SubElement(url, "loc").text = (
             f"{config['blog']}/{config['posts-dir']}/{slug}" if slug else post
         )
-        etree.SubElement(url, "lastmod").text = datetime.datetime.utcfromtimestamp(
+        etree.SubElement(url, "lastmod").text = datetime.datetime.utcfromtimestamp( # type: ignore
             post.get("edited", post["created"]) if slug else now,  # type: ignore
         ).strftime("%Y-%m-%dT%H:%M:%S+00:00")
         etree.SubElement(url, "priority").text = "1.0"
@@ -1286,7 +1286,7 @@ def rss(config: dict[str, typing.Any]) -> int:
     llog("generating an rss feed")
 
     ftime: str = "%a, %d %b %Y %H:%M:%S GMT"
-    now: datetime.datetime = datetime.datetime.utcnow()
+    now: datetime.datetime = datetime.datetime.utcnow() # type: ignore
 
     root: etree.Element = etree.Element("rss")
     root.set("version", "2.0")
@@ -1314,11 +1314,11 @@ def rss(config: dict[str, typing.Any]) -> int:
             link := f"{config['blog']}/{config['posts-dir']}/{slug}"
         )
         etree.SubElement(item, "description").text = post["description"] + (
-            f" [edited at {datetime.datetime.utcfromtimestamp(created).strftime(ftime)}]"
+            f" [edited at {datetime.datetime.utcfromtimestamp(created).strftime(ftime)}]" # type: ignore
             if created
             else ""
         )
-        etree.SubElement(item, "pubDate").text = datetime.datetime.utcfromtimestamp(
+        etree.SubElement(item, "pubDate").text = datetime.datetime.utcfromtimestamp( # type: ignore
             post["created"],
         ).strftime(ftime)
         etree.SubElement(item, "guid").text = link
