@@ -15,6 +15,7 @@ import subprocess
 import sys
 import tempfile
 import typing
+from warnings import filterwarnings
 import xml.etree.ElementTree as etree
 from collections import Counter
 from glob import iglob
@@ -31,7 +32,7 @@ import web_mini
 from readtime import of_markdown as read_time_of_markdown  # type: ignore
 from readtime.result import Result as MarkdownResult  # type: ignore
 
-# from warnings import filterwarnings as filter_warnings
+from warnings import filterwarnings
 
 
 __version__: typing.Final[int] = 2
@@ -43,9 +44,9 @@ ER: typing.Final[int] = 1
 
 CONFIG_FILE: typing.Final[str] = "blog.json"
 DEFAULT_CONFIG: dict[str, typing.Any] = {
-    "title": "blog",
-    "header": "blog",
-    "description": "my blog page",
+    "title": "t1nklas blog",
+    "header": "t1nklas blog",
+    "description": "gayming blog",
     "posts-dir": "b",
     "assets-dir": "content",
     "rss-file": "rss.xml",
@@ -63,10 +64,9 @@ DEFAULT_CONFIG: dict[str, typing.Any] = {
         "personal",
         "website",
     ],
-    "website": "https://example.com",
-    "blog": "https://blog.example.com",
+    "website": "https://t1nklas.lt",
+    "blog": "https://blog.t1nklas.lt",
     "source": "/git",
-    "visitor-count": "/visit",
     "comment": "/c",
     "theme": {
         "primary": "#000",
@@ -82,8 +82,8 @@ DEFAULT_CONFIG: dict[str, typing.Any] = {
             },
         ],
     },
-    "author": "John Doe",
-    "email": "me@example.com",
+    "author": "Alyssa Annett",
+    "email": "contact@t1nklas.lt",
     "locale": "en_GB",
     "recents": 14,
     "indent": 4,
@@ -96,7 +96,7 @@ DEFAULT_CONFIG: dict[str, typing.Any] = {
         "footnotes",
         "abbr",
     ],
-    "editor": ["vim", "--", "%s"],
+    "editor": ["nano", "--", "%s"],
     "context-words": [
         "the",
         "a",
@@ -1552,5 +1552,5 @@ if __name__ == "__main__":
         main.__annotations__.get("return") == "int"
     ), "main() should return an integer"
 
-    # filter_warnings("error", category=Warning)
+    filterwarnings("error", category=Warning)
     raise SystemExit(main())

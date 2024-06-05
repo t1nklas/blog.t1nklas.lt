@@ -8,36 +8,6 @@
     force = true
 
 [[redirects]]
-    from = "/favicon.ico"
-    to = "https://ari.lt/favicon.ico"
-    status = 200
-    force = true
-
-[[redirects]]
-    from = "/blogs/:blog"
-    to = "https://legacy.blog.ari.lt/blogs/:blog"
-    status = 301
-    force = true
-
-[[redirects]]
-    from = "/c"
-    to = "https://user.ari.lt/"
-    status = 301
-    force = true
-
-[[redirects]]
-    from = "/netlify.toml"
-    to = "https://ari.lt/404.blog.xyz"
-    status = 404
-    force = true
-
-[[redirects]]
-    from = "/visit"
-    to = "https://us.ari.lt/counter/@ari/kpnuBU0qISQlfR7cSNwwg9oW8654-RguVrXh9JOBGo3EP1-bm7aF9ROuQO6Jqesk.svg?fill=%23f9f6e8"
-    status = 301
-    force = true
-
-[[redirects]]
     from = "/*"
     to = "https://ari.lt/404.blog.xyz"
     status = 404
