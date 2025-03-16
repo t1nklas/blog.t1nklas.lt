@@ -1,0 +1,4 @@
+pyfzf
+requests
+pillow
+python-magic

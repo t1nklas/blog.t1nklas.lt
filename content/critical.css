@@ -1,0 +1,106 @@
+:root {
+    --af: #cdc4c4;
+    --cf: #f0f3e6;
+    --cb: #1f1b1a;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+h1 {
+    text-align: center;
+}
+
+html {
+    background-image: -o-radial-gradient(
+        circle,
+        rgba(249, 240, 194, 0.15) 1px,
+        transparent 1px
+    );
+    background-image: radial-gradient(
+        circle,
+        rgba(249, 240, 194, 0.15) 1px,
+        transparent 1px
+    );
+    background-size: 20px 20px;
+    background-position: center center;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    padding: 2em;
+
+    margin: auto;
+    max-width: 1100px;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 1.4;
+}
+
+footer {
+    text-align: center;
+    -webkit-filter: brightness(75%);
+    filter: brightness(75%);
+}
+
+br {
+    margin-bottom: 0.25em;
+}
+
+hr {
+    margin-top: 1em;
+}
+
+nav {
+    text-align: center;
+}
+
+#blist {
+    margin-left: 1em;
+}
+
+li {
+    margin-bottom: 0.3em;
+}
+
+a {
+    text-decoration: none;
+    font-style: italic;
+    color: var(--af);
+}
+
+nav img {
+    height: 1em;
+}
+
+code:not(pre code),
+time,
+pre {
+    border-radius: 2px;
+    padding: 0.2em;
+}
+
+code,
+time,
+pre {
+    color: var(--cf);
+    background-color: var(--cb);
+}

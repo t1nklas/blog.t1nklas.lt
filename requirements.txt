@@ -1,0 +1,6 @@
+web-mini
+mistune
+typing
+readtime
+unidecode
+pygments

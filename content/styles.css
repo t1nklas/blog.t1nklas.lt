@@ -1,0 +1,93 @@
+@import url(/content/fonts/Hack.min.css);
+
+:root {
+    --s: 6px;
+}
+
+*,
+*::before,
+*::after {
+    font-family: Hack, hack, monospace;
+
+    scrollbar-color: var(--cb) transparent;
+    scroll-behavior: smooth;
+
+    outline-offset: 3px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+    height: var(--s);
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cb);
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
+}
+
+*[h]:hover > a,
+*[h]:focus > a {
+    opacity: 0.6;
+}
+
+*[h] > a:hover,
+*[h] > a:focus {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    *[h] > a,
+    *[h] > a:hover,
+    *[h] > a:focus {
+        opacity: 1 !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+
+        -webkit-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --b: #000;
+        --f: #fff;
+
+        --cf: #f0f0f0;
+        --cb: #090909;
+
+        --qf: #ededed;
+        --qb: #868e91;
+
+        --af: #a9c4d1;
+
+        --bw: 4px;
+
+        --s: initial;
+    }
+
+    a {
+        opacity: 1 !important;
+    }
+}
