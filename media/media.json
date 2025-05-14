@@ -250,5 +250,61 @@
     "mime": "image/png",
     "uploaded": 1736798025.13735,
     "size": 8070
+  },
+  "64a0f4fea0b0d9be39fd9b22934e860cc38acb652911d5e3ef5ca77623abe66f": {
+    "type": "image",
+    "width": 894,
+    "height": 576,
+    "alt": "A hand-drawn illustration of a fully-connected neural network. Orange neurons (input layer) has no activation function other (yellow hidden and cyan output) layers have an activation function demonstrated by it being half-coloured",
+    "purpose": "To demonstrate a simple neural network",
+    "title": "A simple fully-connected neural network: Input, hidden, and output layers",
+    "license": "CC0-1.0",
+    "credit": "Arija A",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1747241125.920786,
+    "size": 380234
+  },
+  "1300d3e6acae0ac7fec8203a4307c1200170ac5d00858f0e4dc69a97b1658fe2": {
+    "type": "image",
+    "width": 960,
+    "height": 854,
+    "alt": "A terminal window with `cat` being run on a binary file and outputing garbage (since P6 is a binary format) - below is a listing of that file showing its size (2.3 KB) and its filesystem metadata as usual for `ls -l`",
+    "purpose": "To showcase a PPM file",
+    "title": "PPM file",
+    "license": "CC0-1.0",
+    "credit": "Arija A",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1747243167.074285,
+    "size": 77097
+  },
+  "83992ee611d34d446f5b5da5627da6b9cb9106700df1a782e4c6853763963ed6": {
+    "type": "image",
+    "width": 28,
+    "height": 28,
+    "alt": "The number 0 (handwritten) on a black background in white colour",
+    "purpose": "To showcase a file from MNIST",
+    "title": "MNIST 0/005",
+    "license": "CC-BY-SA-3.0",
+    "credit": "Yann LeCun, Corinna Cortes, and Christopher J.C. Burges",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1747243362.187053,
+    "size": 977
+  },
+  "9c33ae78156cce9c64e3f87f510ca257e26c5168d2b200144caf880d58319ec5": {
+    "type": "image",
+    "width": 3072,
+    "height": 1920,
+    "alt": "A screenshot of a terminal emulator window with Lithuanian text reading output of mnist-classify after training and during classification of a drawn number 4",
+    "purpose": "To show training final product",
+    "title": "Screenshot of mnist-classify",
+    "license": "CC0-1.0",
+    "credit": "Arija A",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1747248564.531361,
+    "size": 4015873
   }
 }
