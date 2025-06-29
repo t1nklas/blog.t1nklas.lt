@@ -1946,7 +1946,7 @@ def media(config: dict[str, typing.Any]) -> int:
             "ext": ext,
             "mime": mime,
             "uploaded": datetime.datetime.utcnow().timestamp(),
-            "size": os.path.getsize(path),
+            "size": os.path.getsize(fpath),
         }
     )
 
