@@ -1475,41 +1475,7 @@ def robots(config: dict[str, typing.Any]) -> int:
         r.write(
             f"""User-agent: *
 Disallow: /{config["assets-dir"]}/*
-Sitemap: {config["blog"]}/sitemap.xml
-
-# We are not slaves for machines.
-
-User-agent: YouBot
-User-agent: Omgili
-User-agent: PerplexityBot
-User-agent: CCBot
-User-agent: facebookexternalhit
-User-agent: Amazonbot
-User-agent: ChatGPT-User
-User-agent: ImagesiftBot
-User-agent: AI2Bot
-User-agent: GPTBot
-User-agent: PetalBot
-User-agent: Diffbot
-User-agent: Bytespider
-User-agent: ClaudeBot
-User-agent: OAI-SearchBot
-User-agent: Applebot-Extended
-User-agent: cohere-ai
-User-agent: Claude-Web
-User-agent: ICC-Crawler
-User-agent: VelenPublicWebCrawler
-User-agent: Omgilibot
-User-agent: anthropic-ai
-User-agent: FriendlyCrawler
-User-agent: Scrapy
-User-agent: img2dataset
-User-agent: Google-Extended
-User-agent: Timpibot
-User-agent: meta-externalagent
-User-agent: FacebookBot
-User-agent: Ai2Bot-Dolma
-Disallow: /"""
+Sitemap: {config["blog"]}/sitemap.xml"""
         )
 
         lnew(f"generated {r.name!r}")
