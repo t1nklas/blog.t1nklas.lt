@@ -1474,7 +1474,6 @@ def robots(config: dict[str, typing.Any]) -> int:
     with open("robots.txt", "w") as r:
         r.write(
             f"""User-agent: *
-Disallow: /{config["assets-dir"]}/*
 Sitemap: {config["blog"]}/sitemap.xml"""
         )
 
