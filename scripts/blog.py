@@ -102,6 +102,8 @@ DEFAULT_CONFIG: dict[str, typing.Any] = {
         ],
     },
     "author": "John Doe",
+    "alias": "John",
+    "pronouns": "she/her",
     "email": "me@example.com",
     "locale": "en_GB",
     "recents": 14,
@@ -239,9 +241,9 @@ POST_TEMPLATE: typing.Final[str] = (
 <meta name="title" content="{blog_title} -> {post_title}" />
 <meta property="og:title" content="{blog_title} -> {post_title}" />
 <meta property="twitter:title" content="{blog_title} -> {post_title}" />
-<meta name="description" content="{post_title} by {author} at {post_creation_time} GMT -- {post_description}" />
-<meta property="og:description" content="{post_title} by {author} at {post_creation_time} GMT -- {post_description}" />
-<meta property="twitter:description" content="{post_title} by {author} at {post_creation_time} GMT -- {post_description}" />
+<meta name="description" content="{post_title} by {author}, {pronouns} (aka. {alias}) at {post_creation_time} GMT -- {post_description}" />
+<meta property="og:description" content="{post_title} by {author}, {pronouns} (aka. {alias}) at {post_creation_time} GMT -- {post_description}" />
+<meta property="twitter:description" content="{post_title} by {author}, {pronouns} (aka. {alias}) at {post_creation_time} GMT -- {post_description}" />
 <meta property="article:read_time" content="{post_read_time}" />
 <meta property="og:type" content="article" /> {image_meta}
 </head>
@@ -284,7 +286,7 @@ POST_TEMPLATE: typing.Final[str] = (
  </nav>
 </header>
 <main> <article id="main">{post_content}</article> </main>
-<footer> <p>{note}</p> <p>{author} &lt;<a href="mailto:{email}">{email}</a>&gt; + {license}</p></footer>
+<footer> <p>{note}</p> <p>{author}, {pronouns} (<i>aka.</i> {alias}) &lt;<a href="mailto:{email}">{email}</a>&gt; + {license}</p></footer>
 </body>
 </html>"""
 )
@@ -334,7 +336,7 @@ INDEX_TEMPLATE: typing.Final[str] = (
  </nav>
 </header>
 <main> <article id="main"><ol reversed id=blist>{blog_list}</ol></article> </main>
-<footer> <p>{note}</p> <p>{author} &lt;<a href="mailto:{email}">{email}</a>&gt; + {license}</p></footer>
+<footer> <p>{note}</p> <p>{author}, {pronouns} (<i>aka.</i> {alias}) &lt;<a href="mailto:{email}">{email}</a>&gt; + {license}</p></footer>
 </body>
 </html>"""
 )
@@ -440,7 +442,7 @@ STATS_TEMPLATE: typing.Final[str] = (
    </li>
  </ul>
  </article>
-</main> <footer> <p>{note}</p> <p>{author} &lt;<a href="mailto:{email}">{email}</a>&gt; + {license}</p> </footer> </body>
+</main> <footer> <p>{note}</p> <p>{author}, {pronouns} (<i>aka.</i> {alias}) &lt;<a href="mailto:{email}">{email}</a>&gt; + {license}</p> </footer> </body>
 </html>"""
 )
 
@@ -1179,6 +1181,9 @@ def build(config: dict[str, typing.Any]) -> int:
 
     blog_title: str = html_escape(config["title"])
     author: str = html_escape(config["author"])
+    alias: str = html_escape(config["alias"])
+    email: str = html_escape(config["email"])
+    pronouns: str = html_escape(config["pronouns"])
     styles: str = f"{config['assets-dir']}/styles.min.css"
     lang: str = config["locale"][:2]
 
@@ -1261,6 +1266,8 @@ def build(config: dict[str, typing.Any]) -> int:
                         blog_title=blog_title,
                         post_title=html_escape(post["title"]),
                         author=author,
+                        alias=alias,
+                        pronouns=pronouns,
                         locale=config["locale"],
                         post_creation_time=s,
                         post_description=html_escape(post["description"]),
@@ -1280,7 +1287,7 @@ def build(config: dict[str, typing.Any]) -> int:
                         blog=config["blog"],
                         path=f"{config['posts-dir']}/{slug}/",
                         license=config["license"],
-                        email=config["email"],
+                        email=email,
                         image_meta=image_meta,
                         code_css=code_css,
                         note=config["note"],
@@ -1316,6 +1323,8 @@ def build(config: dict[str, typing.Any]) -> int:
                     rss=config["rss-file"],
                     blog_title=blog_title,
                     author=author,
+                    alias=alias,
+                    pronouns=pronouns,
                     locale=config["locale"],
                     license=config["license"],
                     blog_description=(bd := html_escape(config["description"])),
@@ -1333,7 +1342,7 @@ def build(config: dict[str, typing.Any]) -> int:
                         f'<li><a href="/{config["posts-dir"]}/{slug}">{html_escape(post["title"])}</a></li>'
                         for slug, post in config["posts"].items()
                     ),
-                    email=config["email"],
+                    email=email,
                     note=config["note"],
                 ),
             )
@@ -1414,8 +1423,10 @@ def build(config: dict[str, typing.Any]) -> int:
                     **sorted_post_counter(pm, post_count, "month"),
                     **sorted_post_counter(pd, post_count, "day"),
                     **sorted_post_counter(ph, post_count, "hr"),
-                    author=config["author"],
-                    email=config["email"],
+                    author=author,
+                    alias=alias,
+                    pronouns=pronouns,
+                    email=email,
                     license=config["license"],
                     note=config["note"],
                 )

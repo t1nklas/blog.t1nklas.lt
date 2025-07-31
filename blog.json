@@ -71,7 +71,9 @@
       }
     ]
   },
-  "author": "Arija A. (Ari Archer, she/her)",
+  "author": "Arija A.",
+  "alias": "Ari Archer",
+  "pronouns": "she/her",
   "email": "ari@ari.lt",
   "locale": "en_GB",
   "recents": 14,
