@@ -1184,7 +1184,7 @@
     "contact-me": {
       "title": "Contact me",
       "description": "some of my contacts",
-      "content": "Hi!\n\nHere's some of my contacts:\n\n-   Email: [ari@ari.lt](mailto:ari@ari.lt)\n-   Matrix: [@ari:ari.lt](https://matrix.to/#/@ari:ari.lt)\n-   XMPP: [ari@ari.lt](xmpp:ari@ari.lt)\n-   Fediverse (Akkoma): [@ari@ak.ari.lt](https://ak.ari.lt/ari)\n-   BlueSky (avoid unless needed): [@ari.lt](https://bsky.app/profile/ari.lt)\n-   GitHub: [ar1ja](https://ari.lt/gh)\n    -   Moved to self-hosted git forge at <https://git.ari.lt/ari>\n\nThat's about it I think. This may be out of date so see <https://ari.lt/legal> or something for more up-to-date info.\n\nAnyway if you want to say anything to me I'm going to be available there.\n\nCya! :)",
+      "content": "Hi!\n\nHere's some of my contacts:\n\n-   Email: [ari@ari.lt](mailto:ari@ari.lt)(or [arijawastaken@gmail.com](mailto:arijawastaken@gmail.com) if you're desperate)\n-   XMPP: [ari@ari.lt](xmpp:ari@ari.lt)\n-   BlueSky: [@ari.lt](https://bsky.app/profile/ari.lt)\n-   GitHub: [ar1ja](https://ari.lt/gh)\n    -   Moved to self-hosted git forge at <https://git.ari.lt/ari>\n\nThat's about it I think. This may be out of date so see <https://ari.lt/legal> or something for more up-to-date info.\n\nAnyway if you want to say anything to me I'm going to be available there.\n\nCya! :)",
       "keywords": [
         "mastardon",
         "email",
@@ -1196,7 +1196,7 @@
         "comment"
       ],
       "created": 1666286592.223678,
-      "edited": 1732887315.800159
+      "edited": 1754153656.987922
     },
     "happy-2nd-birthday--ari-web": {
       "title": "Happy 2nd birthday, ari-web",
