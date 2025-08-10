@@ -474,5 +474,33 @@
     "mime": "image/png",
     "uploaded": 1751198732.104614,
     "size": 9183
+  },
+  "24b8ef1c3f2fd021ed56cee63be2a3ed6002018df57373ec3617e725b055206e": {
+    "type": "image",
+    "width": 722,
+    "height": 84,
+    "alt": "Image split in half: first half is text in light grey reading \"Arivertise today!\" on a blue background, the other half is a 3 column list with the bullet points being hearts listing \"minimal horses, Cool people, So much rizz\" (1/3), \"Much nerding, So artistic, Extremely woke\" (2/3), \"Secure, Fast, Minimal\" (3/3). Below the list there text \"Join us today: we are waiting\" surrounded in 3 purple eyes on each side",
+    "purpose": "To show Arivertisement Arivertisement",
+    "title": "Arivertise today!",
+    "license": "CC-BY-NC-SA-4.0",
+    "credit": "Arija A",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1754826712.807803,
+    "size": 44007
+  },
+  "ba4067b55e9a2ef56f2d93f9985ae12248bc27243b50484fd9a6f88488b5e9ae": {
+    "type": "image",
+    "width": 1200,
+    "height": 630,
+    "alt": "ad.ari.lt web page showing an Arivertisement and its about section",
+    "purpose": "Preview for \"I built silly ADs for silly people (and you can join as well!)\"",
+    "title": "Arivertisements home page",
+    "license": "CC-BY-NC-SA-4.0",
+    "credit": "ad.ari.lt",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1754832710.208996,
+    "size": 231631
   }
 }

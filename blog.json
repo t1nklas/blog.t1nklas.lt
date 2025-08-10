@@ -141,6 +141,31 @@
   "code-style": "coffee",
   "note": "Views herein are personal and do not represent my employer, organization, or any other authority. This page uses the <a href=\"https://github.com/ryanoasis/nerd-fonts\">Nerd Hack Font</a>, which is licensed under the OFL 1.1 License. All internal content, unless specified otherwise, is subject to their respective license terms as well as <a href=\"https://ari.lt/legal\">Ari-web statement</a>. Treat the content and the source of the page as source code according to the license :)",
   "posts": {
+    "built-silly-ads-silly-people-you-can-join-as-well": {
+      "title": "I built silly ADs for silly people (and you can join as well!)",
+      "description": "Discover Arivertisements: an open source, privacy-focused, and secure alternative to Johnvertisements. Learn how it was built, its key features, and how you can join this silly Arivertisements community focused on performance and user security.",
+      "content": "Hello, World,\n\nJust a couple of days ago, I launched <https://ad.ari.lt> - a little project called Arivertisements, which serves silly ads by silly people for silly people. It's an open source, security-minded, privacy-focused, and performance-optimized alternative to Johnvertisements from `citrons.xyz`. Today, I want to share what it's all about and hopefully inspire some of you to join in :)\n\n<@:24b8ef1c3f2fd021ed56cee63be2a3ed6002018df57373ec3617e725b055206e>\n\n## How Did Arivertisements Come to Be?\n\nI was a Johnvertisements user, but always felt uneasy about how it worked. Johnvertisements embeds unrestricted iframes on every page with no iframe sandboxing, no open source code, questionable performance at times, no security headers, no way to verify if your ad actually got displayed, no `alt` text, no HSTS, and generally poor protection for user privacy and security on the technical front when embedding a full web-page in your site.\n\nWhen Johnvertisements went down for like 6(?) hours, I decided it was time to build something better. That's how Arivertisements was born - to address all the issues I felt uneasy with and create a safer, faster, transparent alternative.\n\n## How Was It Built?\n\nI started with my new [Flask template](https://git.ari.lt/templates/flask) (maybe overkill for this project, but hey, why not?). The first version was basic and had bugs, which I promptly fixed. Though, here's what the initial version included:\n\n- Checking for DNS `A` records **without filtering out private IPs**.\n- Showing author info **with email in plain text**.\n- Basic security and privacy on the embed page.\n- Basic rate limiting.\n- No handling of duplicate or frequent hits.\n- Loose caching.\n- A leaderboard.\n- Metadata and image loading for Arivertisements.\n\nIt worked fine but needed robustness. Over the next two days, I made many improvements, including but not limited to:\n\n- Added private IP range checks to block fake or local domains.\n- Secured email display: initially simple obfuscation with a slower HTML entity-encoded page, and finally a more sophisticated client-side JS obfuscation using BLAKE2s and RC4.\n- Toughened security and privacy site-wide, applying strict `Content-Security-Policy`, `Cross-Origin-Resource-Policy`, and other protective headers.\n- Implemented more granular rate limiting to prevent abuse even further.\n- Started anonymous session-based tracking with a short-lived cookie to avoid counting repeated refreshes as new hits.\n- Enforced strict caching so the embed can only be requested every 5 minutes if cached, and images get cached for 30 hours without re-validation. This means cached clients see lightning-fast loads.\n- Improved metadata and crawling rules.\n\nOverall, the app is pretty simple with only about 4000 lines of code, but designed for maximum security and performance without overloading the server.\n\nIt's also protected by multiple filtering layers to keep things secure and reduce abuse.\n\n## How Can You Join?\n\nI warmly invite you to join Arivertisements! We already have 7 Arivertisements in rotation and over a thousand Arivertisements served across different sites. Eleven sites are already proudly Arivertising, and now it's your turn!\n\n- To join: see <https://ad.ari.lt/#yourself>\n- Want to help improve the back-end? See <https://git.ari.lt/ari.lt/ad.ari.lt>.\n- To embed an Arivertisement on your website: See <https://ad.ari.lt/#embedding>.\n\n## Thank You!\n\nThanks for reading this little Ariblogvertisement for Arivertisements. If this sounds interesting, jump in and be part of the silly nerd squad.\n\nHappy Arivertising!",
+      "keywords": [
+        "secure web ads",
+        "content security policy",
+        "web development project",
+        "open source ads",
+        "ad rate limiting",
+        "embed ads",
+        "flask project",
+        "johnvertisements alternative",
+        "web privacy",
+        "performance optimized ads",
+        "arivertisements",
+        "web advertising",
+        "anti-abuse ads",
+        "privacy-focused advertising",
+        "client-side obfuscation",
+        "ad security"
+      ],
+      "created": 1754832344.12083,
+      "preview": "ba4067b55e9a2ef56f2d93f9985ae12248bc27243b50484fd9a6f88488b5e9ae"
+    },
     "ethservices-really-cool-hosting-provider": {
       "title": "ETH-Services is a really cool hosting provider",
       "description": "A detailed review of ETH-Services, a small but powerful VPS hosting provider in Frankfurt, Germany. I share my personal experience, performance benchmarks, setup tips, and how to run a secure, DDoS-protected VPS using their infrastructure. Enjoy this affordable hosting provider's service!",
