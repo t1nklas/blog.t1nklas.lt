@@ -1572,6 +1572,7 @@ def rss(config: dict[str, typing.Any]) -> int:
     etree.SubElement(channel, "title").text = config["title"]
     etree.SubElement(channel, "link").text = config["blog"]
     etree.SubElement(channel, "ttl").text = "1440"
+    etree.SubElement(channel, "category").text = "Blog"
     etree.SubElement(channel, "description").text = config["description"]
     etree.SubElement(channel, "generator").text = GEN
     etree.SubElement(channel, "language").text = (
