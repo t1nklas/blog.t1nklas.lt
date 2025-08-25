@@ -1571,12 +1571,22 @@ def rss(config: dict[str, typing.Any]) -> int:
 
     etree.SubElement(channel, "title").text = config["title"]
     etree.SubElement(channel, "link").text = config["blog"]
+    etree.SubElement(channel, "ttl").text = "1440"
     etree.SubElement(channel, "description").text = config["description"]
     etree.SubElement(channel, "generator").text = GEN
     etree.SubElement(channel, "language").text = (
         config["locale"].lower().replace("_", "-")
     )
     etree.SubElement(channel, "lastBuildDate").text = now.strftime(ftime)
+    etree.SubElement(channel, "managingEditor").text = (
+        f"{config['email']} ({config['author']})"
+    )
+    etree.SubElement(channel, "webMaster").text = (
+        f"{config['email']} ({config['author']})"
+    )
+    etree.SubElement(channel, "copyright").text = (
+        f"Copyright (C) {now.year} {config['author']} <{config['email']}>. Licensed under {config['license']}."
+    )
 
     for slug, post in config["posts"].items():
         llog(f"adding {slug!r} to rss")
