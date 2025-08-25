@@ -1589,7 +1589,14 @@ def rss(config: dict[str, typing.Any]) -> int:
         f"Copyright (C) {now.year} {config['author']} <{config['email']}>. Licensed under {config['license']}."
     )
 
-    for slug, post in config["posts"].items():
+    posts = tuple(config["posts"].items())
+
+    first_post_time: str = datetime.datetime.utcfromtimestamp(
+        posts[-1][1]["created"]
+    ).strftime(ftime)
+    etree.SubElement(channel, "pubDate").text = first_post_time
+
+    for slug, post in posts:
         llog(f"adding {slug!r} to rss")
 
         created: float | None = post.get("edited")
