@@ -237,10 +237,10 @@ POST_TEMPLATE: typing.Final[str] = (
     HTML_BEGIN
     + """
 <style type="text/css">{post_critical_css}{code_css}</style>
-<title>{blog_title} -> {post_title}</title>
-<meta name="title" content="{blog_title} -> {post_title}" />
-<meta property="og:title" content="{blog_title} -> {post_title}" />
-<meta property="twitter:title" content="{blog_title} -> {post_title}" />
+<title>{blog_title} - {post_title}</title>
+<meta name="title" content="{blog_title} - {post_title}" />
+<meta property="og:title" content="{blog_title} - {post_title}" />
+<meta property="twitter:title" content="{blog_title} - {post_title}" />
 <meta name="description" content="{post_title} by {author}, {pronouns} (aka. {alias}) at {post_creation_time} GMT -- {post_description}" />
 <meta property="og:description" content="{post_title} by {author}, {pronouns} (aka. {alias}) at {post_creation_time} GMT -- {post_description}" />
 <meta property="twitter:description" content="{post_title} by {author}, {pronouns} (aka. {alias}) at {post_creation_time} GMT -- {post_description}" />
@@ -344,8 +344,8 @@ INDEX_TEMPLATE: typing.Final[str] = (
 STATS_TEMPLATE: typing.Final[str] = (
     HTML_BEGIN
     + """
-<title>{blog_title} -> stats</title>
-<meta property="og:title" content="{blog_title} -> stats" />
+<title>{blog_title} - stats</title>
+<meta property="og:title" content="{blog_title} - stats" />
 <meta name="description" content="Statistics of {blog_title}, {blog_description}" />
 <meta property="og:description" content="Statistics of {blog_title}, {blog_description}" />
 <meta property="og:type" content="website" />
