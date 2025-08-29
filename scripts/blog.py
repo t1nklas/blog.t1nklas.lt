@@ -1596,7 +1596,7 @@ def rss(config: dict[str, typing.Any]) -> int:
     ).strftime(ftime)
     etree.SubElement(channel, "pubDate").text = first_post_time
 
-    for slug, post in posts[:92]:
+    for slug, post in posts[:64]:
         llog(f"adding {slug!r} to rss")
 
         created: float | None = post.get("edited")
