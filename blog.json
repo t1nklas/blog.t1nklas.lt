@@ -141,6 +141,29 @@
   "code-style": "coffee",
   "note": "Views herein are personal and do not represent my employer, organization, or any other authority. This page uses the <a href=\"https://github.com/ryanoasis/nerd-fonts\">Nerd Hack Font</a> subsets, which are licensed under the <a href=\"/content/fonts/LICENSE.txt\">SIL Open Font License</a> (OFL). All internal content, unless specified otherwise, is subject to their respective license terms as well as <a href=\"https://ari.lt/legal\">Ari-web legal framework</a>. Treat the content and the source of the page as source code according to the license :)",
   "posts": {
+    "2-million": {
+      "title": "2 million??",
+      "description": "A thank you to everyone who visited Ari-web as it hit 2 million visitors. Reflecting on rapid growth since reaching 1 million just over a year ago, celebrating the upcoming 5-year anniversary of the site, and looking forward to future milestones together. I appreciate you!",
+      "content": "Hello, World!\n\nAlthough I just missed hitting the 2 million visitors milestone this time around, I want to take a moment to sincerely thank every single one of you for stopping by my website. As I write this, the visitor counter stands at `2016782` - but honestly, who's counting? Well, I am! I wish I had caught it right at 2 million, but maybe 3 million will be my lucky number. 1 million wasn't, 2 million wasn't, so third time's the charm? Either way, that would be more than the entire population of Lithuania.\n\nIt's incredible to think that just over a year ago, we [celebrated the 1 million visitor mark](https://blog.ari.lt/b/1-million/), and now here we are, doubling that number. At this rate, could 3 million visitors be possible by summer 2026? Let's wait and see!\n\nOn another exciting note, Ari-web will be turning 5 years old on October 18th - a milestone that feels both surreal and amazing. And as if that wasn't enough, I'll also be turning 18. Time truly flies and numbers are numbering...\n\nThank you all so much for every single visit and every counter hit. I couldn't have done this without you!\n\nUntil next time :D",
+      "keywords": [
+        "website statistics",
+        "ari-web anniversary",
+        "lithuania population",
+        "personal milestone",
+        "user thanks",
+        "visitor growth",
+        "3 million goal",
+        "time flies",
+        "website journey",
+        "2 million visitors",
+        "5 years online",
+        "visitor counter",
+        "community appreciation",
+        "website milestone"
+      ],
+      "created": 1756569214.045314,
+      "preview": "e9602a26ce70b07f0ae718961da9aff596d228e6e297618f3191259267216d74"
+    },
     "built-silly-ads-silly-people-you-can-join-as-well": {
       "title": "I built silly ADs for silly people (and you can join as well!)",
       "description": "Discover Arivertisements: an open source, privacy-focused, and secure alternative to Johnvertisements. Learn how it was built, its key features, and how you can join this silly Arivertisements community focused on performance and user security.",

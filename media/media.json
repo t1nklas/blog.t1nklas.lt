@@ -502,5 +502,19 @@
     "mime": "image/png",
     "uploaded": 1754832710.208996,
     "size": 231631
+  },
+  "e9602a26ce70b07f0ae718961da9aff596d228e6e297618f3191259267216d74": {
+    "type": "image",
+    "width": 630,
+    "height": 215,
+    "alt": "Number \"2016782\" on a black background",
+    "purpose": "Preview for the '2 million' visitor milestone post",
+    "title": "two million sixteen thousand seven hundred eighty-two",
+    "license": "CC0-1.0",
+    "credit": "Arija A",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1756569429.298319,
+    "size": 6913
   }
 }
