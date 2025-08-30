@@ -165,7 +165,7 @@ DEFAULT_CONFIG: dict[str, typing.Any] = {
     "top-words": 64,
     "top-tags": 64,
     "code-style": "coffee",
-    "note": 'Views herein are personal and do not represent my employer, organization, or any other authority. This page uses the <a href="https://github.com/ryanoasis/nerd-fonts">Nerd Hack Font</a>, which is licensed under the <a href="/content/fonts/LICENSE.txt">SIL Open Font License</a> (OFL). All internal content, unless specified otherwise, is subject to their respective license terms as well as <a href="https://ari.lt/legal">Ari-web legal framework</a>. Treat the content and the source of the page as source code according to the license :)',
+    "note": 'Views herein are personal and do not represent my employer, organization, or any other authority. This page uses the <a href="https://github.com/ryanoasis/nerd-fonts">Nerd Hack Font</a> subsets, which are licensed under the <a href="/content/fonts/LICENSE.txt">SIL Open Font License</a> (OFL). All internal content, unless specified otherwise, is subject to their respective license terms as well as <a href="https://ari.lt/legal">Ari-web legal framework</a>. Treat the content and the source of the page as source code according to the license :)',
     "posts": {},
 }
 
