@@ -516,5 +516,19 @@
     "mime": "image/png",
     "uploaded": 1756569429.298319,
     "size": 6913
+  },
+  "974db56743c004fdbc4a921343829896085515e6843d460960ebde2aaa05a75a": {
+    "type": "image",
+    "width": 600,
+    "height": 300,
+    "alt": "A badly hand drawn Lithuanian flag on a black background with a light blue question mark atop of the Lithuanian flag",
+    "purpose": "Image preview for blog post \"I am conflicted about my Lithuanian identity\"",
+    "title": "Lithuanian flag questionmark",
+    "license": "CC0-1.0",
+    "credit": "Arija A",
+    "ext": "png",
+    "mime": "image/png",
+    "uploaded": 1757189398.902747,
+    "size": 14617
   }
 }
