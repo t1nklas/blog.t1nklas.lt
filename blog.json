@@ -55,7 +55,7 @@
   "blog": "https://blog.ari.lt",
   "source": "/git",
   "visitor-count": "https://ari.lt/counter.svg?fill=%23f9f6e8",
-  "comment": "https://ari.lt/#gb",
+  "comment": "https://ari.lt/guestbook",
   "theme": {
     "primary": "#262220",
     "secondary": "#f9f6e8",
