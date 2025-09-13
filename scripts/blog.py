@@ -436,6 +436,7 @@ STATS_TEMPLATE: typing.Final[str] = (
     <ul>
       <li>Average posts by year: {posts_by_yr_avg} <ol>{posts_by_yr}</ol></li>
       <li>Average posts by month: {posts_by_month_avg} <ol>{posts_by_month}</ol></li>
+      <li>Average posts by weekday: {posts_by_wd_avg} <ol>{posts_by_wd}</ol></li>
       <li>Average posts by day: {posts_by_day_avg} <ol>{posts_by_day}</ol></li>
       <li>Average posts by hour: {posts_by_hr_avg} <ol>{posts_by_hr}</ol></li>
     </ul>
@@ -688,7 +689,7 @@ def min_css_file(file: str, out: str) -> None:
 
 
 def sorted_post_counter(
-    c: Counter[int],
+    c: Counter[typing.Any],
     pcount: int,
     fix: str,
 ) -> typing.Dict[str, typing.Any]:
@@ -1205,6 +1206,7 @@ def build(config: dict[str, typing.Any]) -> int:
 
     py: Counter[int] = Counter()
     pm: Counter[int] = Counter()
+    pw: Counter[str] = Counter()
     pd: Counter[int] = Counter()
     ph: Counter[int] = Counter()
 
@@ -1231,6 +1233,7 @@ def build(config: dict[str, typing.Any]) -> int:
 
         py[dt.year] += 1
         pm[dt.month] += 1
+        pw[dt.strftime("%A")] += 1
         pd[dt.day] += 1
         ph[dt.hour] += 1
 
@@ -1421,6 +1424,7 @@ def build(config: dict[str, typing.Any]) -> int:
                     ),
                     **sorted_post_counter(py, post_count, "yr"),
                     **sorted_post_counter(pm, post_count, "month"),
+                    **sorted_post_counter(pw, post_count, "wd"),
                     **sorted_post_counter(pd, post_count, "day"),
                     **sorted_post_counter(ph, post_count, "hr"),
                     author=author,
