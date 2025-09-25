@@ -29,11 +29,11 @@
         "secondary": "#fff",
         "type": "dark"
     },
-    "favicon": "https://github.com/t1nklas/t1nklas-web/blob/main/images/favicon.ico",
+    "favicon": "https://raw.githubusercontent.com/t1nklas/t1nklas-web/refs/heads/main/images/favicon.ico",
     "manifest": {
         "icons": [
             {
-                "src": "https://github.com/t1nklas/t1nklas-web/blob/main/images/favicon.ico",
+                "src": "https://raw.githubusercontent.com/t1nklas/t1nklas-web/refs/heads/main/images/favicon.ico",
                 "sizes": "128x128",
                 "type": "image/vnd.microsoft.icon"
             }
@@ -107,7 +107,7 @@
     "top-words": 64,
     "top-tags": 64,
     "code-style": "coffee",
-    "note": "Views herein are personal and do not represent my employer, organization, or any other authority. This page uses the <a href=\"https://github.com/ryanoasis/nerd-fonts\">Nerd Hack Font</a> subsets, which are licensed under the <a href=\"/content/fonts/LICENSE.txt\">SIL Open Font License</a> (OFL). All internal content, unless specified otherwise, is subject to their respective license terms as well as <a href=\"https://ari.lt/legal\">Ari-web legal framework</a>. Treat the content and the source of the page as source code according to the license :)",
+    "note": "This page uses the <a href=\"https://github.com/ryanoasis/nerd-fonts\">Nerd Hack Font</a>, which is licensed under the OFL 1.1 License.",
     "posts": {
         "hello-world": {
             "title": "Hello world!",
