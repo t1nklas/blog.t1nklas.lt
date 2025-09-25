@@ -109,6 +109,15 @@
     "code-style": "coffee",
     "note": "This page uses the <a href=\"https://github.com/ryanoasis/nerd-fonts\">Nerd Hack Font</a>, which is licensed under the OFL 1.1 License.",
     "posts": {
+        "music-why-love-it": {
+            "title": "Music and why I love it",
+            "description": "i rant about music",
+            "content": "## Why?\n\nI love music, I just do. I love hearing vibrations in my ear making different tunes, it's amazing! I've been obsessing over music in general this year, I used to listen to it just for the background, but now I **listen** to it.\n\n## What do you listen to?\n\nLast week as I am writing this, I got asked \"Why do you listen to such unknown artists?\". Which is obvious in my opinion, most* people like what's popular, and there are MANY amazing small artists that do music as a hobby. And why not support them? I've switched to Tidal (from Spotify) mainly for higher payout for others (~1 cent per stream) and FLAC. Not to mention it's also partially cheaper than Spotify right now, which is great.\nYeah, I may not listen to the most \"unknown\" artists, but mostly everyone I know doesnt know about them, so here is my short list :3\n\nVoX LoW -- Superkoloritas -- Soft Kill -- Andy Stott -- BEATFOOT (BEATFOOT ALBUM)",
+            "keywords": [
+                "music"
+            ],
+            "created": 1758840001.678406
+        },
         "hello-world": {
             "title": "Hello world!",
             "description": "test post",
